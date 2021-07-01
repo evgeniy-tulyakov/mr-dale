@@ -5,10 +5,6 @@ description = "discord bot that will always come to the rescue when working toge
 license = "MIT"
 authors = ["evgeniy tulyakov <e.v.tulyakov1998@gmail.com>"]
 readme = "README.md"
-packages = [
-    { include = "mr_dale", from = "src" },
-    { include = "server.py", from = "src" },
-]
 
 
 [tool.poetry.dependencies]
@@ -26,7 +22,7 @@ flake8-variables-names = "^0.0.4"
 
 
 [tool.poetry.scripts]
-start-bot = "src.server:start"
+mr_dale = "mr_dale.server:start"
 
 
 [build-system]

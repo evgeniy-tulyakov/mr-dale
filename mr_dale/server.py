@@ -1,7 +1,7 @@
 ﻿from logging.config import dictConfig
 
-from mr_dale.bot import Bot
-from mr_dale.config import BOT_TOKEN, LOGGING_SETTINGS
+from .bot import Bot
+from .config import BOT_TOKEN, LOGGING_SETTINGS
 
 
 
