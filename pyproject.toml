@@ -6,6 +6,12 @@ license = "MIT"
 authors = ["evgeniy tulyakov <e.v.tulyakov1998@gmail.com>"]
 readme = "README.md"
 
+include = [{ path = "tests", format = "sdist" }]
+
+
+[tool.poetry.build]
+generate-setup-file = false
+
 
 [tool.poetry.dependencies]
 python = "^3.8"

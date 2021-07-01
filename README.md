@@ -34,5 +34,5 @@ Before starting the bot, you need to configure the environment variable "mrdtoke
 this variable must contain the secret token required to interact with the discord api. 
 to launch the bot, run the following command:
 ```
-poetry run start-bot
+poetry run mr_dale
 ```
