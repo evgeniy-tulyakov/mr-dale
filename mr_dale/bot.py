@@ -1,3 +1,4 @@
+import json
 import logging
 from typing import Optional
 
@@ -18,14 +19,17 @@ class Bot(commands.Bot):
 
     async def on_ready(self):
         logger.info(f'Logged in as: {self.user.name} {self.user.id}')
+        with open('mr_dale/ui_resources/startup.json', 'rb') as f:
+            ui_messages = json.load(f)
         host_guild: Guild = self.guilds[0]
-        ch: Optional[TextChannel] = find(
+        expected_bot_channel: Optional[TextChannel] = find(
             lambda item: item.name == 'dialog', host_guild.text_channels
         )
-
-        if ch is None:
-            await host_guild.system_channel.send('@everyone Здравствуйте! ', tts=True)
-            await host_guild.create_text_channel('dialog', topic='Диалог с ботом')
+        if expected_bot_channel is None:
+            await host_guild.system_channel.send(content=ui_messages['first_run_msg'], tts=True)
+            bot_channel: TextChannel = await host_guild.create_text_channel(
+                'dialog', topic=ui_messages['bot_channel']['topic']
+            )
+            await bot_channel.send(content=ui_messages['bot_channel']['first_msg'])
         else:
-
-            await host_guild.system_channel.send('@everyone снова увиделись! ', tts=True)
+            await host_guild.system_channel.send(ui_messages['relode_msg'], tts=True)

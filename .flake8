@@ -5,7 +5,7 @@ statistics = True
 show-source = True
 
 # Setup flake8-import-order
-application-import-names = src, tests
+application-import-names = mr_dale, tests
 import-order-style = google
 
 # Setup flake8-quotes
@@ -35,5 +35,6 @@ exclude =
     Pipfile.lock,
     *.code-workspace,
     *.sql,
+    *.json,
     *.md
   
