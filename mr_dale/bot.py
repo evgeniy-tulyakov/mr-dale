@@ -12,6 +12,9 @@ logger = logging.getLogger(__name__)
 
 
 class Bot(commands.Bot):
+    '''
+    implements a custom class for the bot object
+    '''
 
     def __init__(self, *args, **kwargs):
         super(Bot, self).__init__(*args, **kwargs)

@@ -1,4 +1,8 @@
-﻿from logging.config import dictConfig
+﻿'''
+Main module of this App.
+'''
+
+from logging.config import dictConfig
 
 from .bot import Bot
 from .config import BOT_TOKEN, LOGGING_SETTINGS
@@ -6,6 +10,9 @@ from .config import BOT_TOKEN, LOGGING_SETTINGS
 
 
 def start():
+    '''
+    Performs initialization and launch of the bot
+    '''
     dictConfig(LOGGING_SETTINGS)
     bot_instance = Bot(command_prefix='$$', case_insensitive=True)
     try:

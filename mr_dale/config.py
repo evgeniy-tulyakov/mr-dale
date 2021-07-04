@@ -1,3 +1,8 @@
+'''
+Constants necessary for the correct execution of this bot. 
+here, most of the values of the environment variables are extracted.
+'''
+
 from os import getenv
 from pathlib import Path
 
