@@ -9,7 +9,8 @@ from pathlib import Path
 
 
 # Base settings
-PROJECT_PATH = Path(__file__).resolve().parent.parent
+PROJECT_PATH = Path(__file__).resolve().parent
+UI_RESOURCES_PATH = PROJECT_PATH / 'ui_resources'
 BOT_TOKEN = getenv('mrdtoken')
 
 

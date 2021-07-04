@@ -6,6 +6,8 @@ from discord import Guild, TextChannel
 from discord.ext import commands
 from discord.utils import find
 
+from . import config
+
 
 
 logger = logging.getLogger(__name__)
@@ -22,7 +24,7 @@ class Bot(commands.Bot):
 
     async def on_ready(self):
         logger.info(f'Logged in as: {self.user.name} {self.user.id}')
-        with open('mr_dale/ui_resources/startup.json', 'rb') as f:
+        with open(config.UI_RESOURCES_PATH / 'startup.json', 'rb') as f:
             ui_messages = json.load(f)
         host_guild: Guild = self.guilds[0]
         expected_bot_channel: Optional[TextChannel] = find(
