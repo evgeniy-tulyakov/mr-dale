@@ -1,5 +1,5 @@
 '''
-Constants necessary for the correct execution of this bot. 
+Constants necessary for the correct execution of this bot.
 here, most of the values of the environment variables are extracted.
 '''
 

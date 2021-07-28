@@ -16,6 +16,7 @@ generate-setup-file = false
 [tool.poetry.dependencies]
 python = "^3.8"
 "discord.py" = "^1.7.3"
+"discord-ext-menus" = { git = "https://github.com/Rapptz/discord-ext-menus.git" }
 
 
 [tool.poetry.dev-dependencies]
