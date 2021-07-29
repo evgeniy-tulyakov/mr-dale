@@ -2,6 +2,7 @@
 Main module of this App.
 '''
 
+from discord import Intents
 from logging.config import dictConfig
 
 from .bot import Bot
@@ -14,7 +15,8 @@ def start():
     Performs initialization and launch of the bot
     '''
     dictConfig(LOGGING_SETTINGS)
-    bot_instance = Bot(command_prefix='$$', case_insensitive=True)
+    intents_object = Intents.all()
+    bot_instance = Bot(command_prefix='$$', case_insensitive=True, intents=intents_object)
     try:
         bot_instance.loop.run_until_complete(bot_instance.start(BOT_TOKEN))
     except KeyboardInterrupt:
