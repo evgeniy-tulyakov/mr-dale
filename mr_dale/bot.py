@@ -38,3 +38,8 @@ class Bot(commands.Bot):
             await bot_channel.send(content=ui_messages['bot_channel']['first_msg'])
         else:
             await host_guild.system_channel.send(ui_messages['relode_msg'], tts=True)
+
+
+    def run(self, token):
+        logger.info('starting mr_dale')
+        super().run(token, reconnect=True)
