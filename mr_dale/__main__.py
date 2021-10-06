@@ -27,3 +27,8 @@ def start():
     intents_object = Intents.all()
     bot_instance = Bot(command_prefix='$$', case_insensitive=True, intents=intents_object)
     bot_instance.run(BOT_TOKEN)
+
+
+
+if __name__ == '__main__':
+    start()
