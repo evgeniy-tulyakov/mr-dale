@@ -22,7 +22,8 @@ max-line-length = 100
 ignore =
     E252,  # Missing whitespace around parameter equals
     E303,  # Too many blank lines
-    E701  # Multiple statements on one line (colon)
+    E701,  # Multiple statements on one line (colon)
+    E731  # Do not assign a lambda expression
 
 
 exclude =
