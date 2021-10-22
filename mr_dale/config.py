@@ -14,6 +14,11 @@ UI_RESOURCES_PATH = PROJECT_PATH / 'ui_resources'
 BOT_TOKEN = getenv('mrdtoken')
 
 
+EXTENSIONS_LIST = [
+    'mr_dale.admin'
+]
+
+
 # Configuring the logging mechanism
 LOG_FORMAT = {
     'format': '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'

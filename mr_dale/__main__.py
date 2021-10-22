@@ -9,7 +9,7 @@ import sys
 from discord import Intents
 
 from .bot import Bot
-from .config import BOT_TOKEN, LOGGING_SETTINGS
+from .config import BOT_TOKEN, EXTENSIONS_LIST, LOGGING_SETTINGS
 
 
 
@@ -26,6 +26,8 @@ def start():
 
     intents_object = Intents.all()
     bot_instance = Bot(command_prefix='$$', case_insensitive=True, intents=intents_object)
+    for ext in EXTENSIONS_LIST:
+        bot_instance.load_extension(ext)
     bot_instance.run(BOT_TOKEN)
 
 
