@@ -11,3 +11,4 @@ def find_channel_by_name(
     for channel in channels:
         if predicate(channel):
             return channel
+    return None
