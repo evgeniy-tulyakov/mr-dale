@@ -5,7 +5,7 @@ description = "discord bot that will always come to the rescue when working toge
 license = "MIT"
 authors = ["evgeniy tulyakov <e.v.tulyakov1998@gmail.com>"]
 readme = "README.md"
-
+repository = "https://github.com/evgeniy-tulyakov/mr-dale"
 include = [{ path = "tests", format = "sdist" }]
 
 
